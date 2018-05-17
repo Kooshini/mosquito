@@ -197,7 +197,7 @@ class Engine:
                 self.last_valid_ticker = self.ticker.copy()
 
                 # Get next actions
-                self.actions = self.strategy.calculate(self.look_back, self.wallet)
+                self.actions = self.strategy.calculate(self.look_back, self.wallet, self.ticker)
 
                 # Set trade
                 self.actions = self.bot.trade(self.actions,
